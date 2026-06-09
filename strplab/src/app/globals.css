@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-geist: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-family: var(--font-inter);
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #111111;
+    color: #FFFFFF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F7F7F7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #111111;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-16 xl:px-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-brand-text text-white px-8 py-4 text-sm font-medium tracking-[0.08em] uppercase transition-all duration-300 hover:bg-brand-carbon;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-brand-text text-brand-text px-8 py-4 text-sm font-medium tracking-[0.08em] uppercase transition-all duration-300 hover:bg-brand-text hover:text-white;
+  }
+
+  .btn-ghost-white {
+    @apply inline-flex items-center gap-2 border border-white text-white px-8 py-4 text-sm font-medium tracking-[0.08em] uppercase transition-all duration-300 hover:bg-white hover:text-brand-text;
+  }
+
+  .label-eyebrow {
+    @apply text-xs font-medium tracking-[0.2em] uppercase text-brand-secondary;
+  }
+
+  .label-eyebrow-white {
+    @apply text-xs font-medium tracking-[0.2em] uppercase text-white/60;
+  }
+}
